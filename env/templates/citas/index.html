@@ -1,0 +1,125 @@
+{% extends "index.html" %}
+{% block body%}
+
+<h2>
+    Gestionar Citas
+</h2>
+<div class="row col-md-12">
+
+
+
+    <div class="col-md-5">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <div class="col-md-1">
+
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </div>
+
+    <div class="col-md-6 text-right">
+        <h3>
+
+            <button class="btn btn-outline-primary">Crear cita</button>
+        </h3>
+    </div>
+
+</div>
+
+<div class="row col-md-12">
+
+    <!--  citas pendientes-->
+    <div class="col-md-6">
+        <h3 class="text-center"> citas pendientes</h3>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Medico </th>
+                    <th scope="col">accion </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
+                            class="btn btn-outline-danger">cancelar</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
+                            class="btn btn-outline-danger">cancelar</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
+                            class="btn btn-outline-danger">cancelar</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--  citas realizadas-->
+    <div class="col-md-6">
+
+        <h3 class="text-center"> citas realizadas</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Medico </th>
+                    <th scope="col">accion </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+
+                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
