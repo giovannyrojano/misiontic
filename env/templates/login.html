@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilo.css')}}"/>
+    <script src="https://kit.fontawesome.com/4fd8c826c1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <form class="formulario">
@@ -14,12 +15,12 @@
 
             <div class="inputContenedor">
                 <input type="text" placeholder="Correo Electrónico">
-                <img class="icon" src="{{url_for('static',filename='img/user.png')}}" >
+                <i class="far fa-user"></i>
             </div>
 
             <div class="inputContenedor">
                 <input type="password" placeholder="Contraseña">
-                <img class="icon" src="{{url_for('static',filename='img/password.png')}}">
+                <i class="fas fa-lock"></i>
             </div>
 
             <input type="submit" value="Acceder" class="button">
