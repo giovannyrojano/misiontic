@@ -9,7 +9,7 @@
 
 
     <div class="col-md-5">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" id="text-cita" placeholder="Search" aria-label="Search">
     </div>
     <div class="col-md-1">
 
@@ -41,7 +41,7 @@
                     <th scope="col">accion </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-citas">
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
@@ -117,7 +117,7 @@
 </div>
 
 
-
+<script src="{{ url_for('static', filename='js/citas/citasController.js') }}"></script>
 
 
 
