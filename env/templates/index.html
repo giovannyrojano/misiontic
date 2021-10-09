@@ -19,6 +19,8 @@
 
 <!-- scripts propios -->
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<!-- scripts propios -->
+
 
 <body>
     <!-- navbar -->
@@ -42,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url_for('main.citas') }}">Citas</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('main.cita') }}">Citas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -79,10 +81,13 @@
 
     <h1>Hola mundo</h1>
 
+    <div class="container">
+        {% block body %}
 
-    {% block body %}
+        {% endblock %}
+    </div>
 
-    {% endblock %}
+
 </body>
 
 </html>
