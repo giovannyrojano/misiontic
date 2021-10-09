@@ -7,7 +7,7 @@ main = blueprints.Blueprint('main', __name__)
 
 @main.route('/')
 def index():
- return render_template("index.html")
+ return render_template("login.html")
 
 @main.route('/cita/')
 def cita():
@@ -32,27 +32,7 @@ def addCita():
     return render_template('cita/index.html')
 
 
-
-
-@main.route('/registro', methods=['GET', 'POST'])
+@main.route('/registroUsuario',methods=['GET','POST'])          
 def registro():
+    return render_template("registroUsuario.html")
 
-    if(request.method == 'POST'):
-
-        correoUsuario=request.form['correo']
-        nombreUsuario=request.form['nombre']
-        claveUsuario=request.form['userPassword']
-
-        cad="Hola {0}, este es un correo de pruba.".format(nombreUsuario)
-        #Esto es solo una demo, Esto es seguro
-        try:
-            clienteMail = yagmail.SMTP("tucuentdeCorreo@gmail.com","1234ABC")
-            clienteMail.send(to=correoUsuario, subject="Activa tu cuenta", contents=cad )
-        except BaseException as e:
-            return "Error" + str(e)
-
-
-        return render_template("login.html")
-
-
-    return render_template("registro.html")

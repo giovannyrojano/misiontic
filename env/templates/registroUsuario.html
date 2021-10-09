@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>registro</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilo.css')}}"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <form class="formulario">
+            <h1>Nuevo usuario</h1>
+            <div class="contenedor">
+                <div class="inputContenedor">
+                    <input type="text" placeholder="Nombres" style="width: 100%;" >
+                </div>
+                <div class="inputContenedor">
+                    <input type="text" placeholder="Apellidos" style="width: 100%;">
+                </div>
+                <div class="inputContenedor">
+                    <img class="icon" src="{{url_for('static',filename='img/email.png')}}"  >
+                    <input type="text" placeholder="Email" >
+                    
+                </div>
+                <div class="inputContenedor" style="padding: 10px; background:rgb(255, 255, 255);">
+                    <label> Tipo de documento:</label>
+                    <label for="rCedula">CC</label>
+                    <input id="rCedula" type="radio" value="CC" name="documento">
+                    <label for="rTarjeta">Ti</label>
+                    <input id="rTarjeta" type="radio" value="Ti" name="documento">
+                </div>
+                <div class="inputContenedor">
+                    <input type="text" placeholder="Numero de documento" style="width: 100%;">
+                </div>
+                <div class="inputContenedor">
+                    <img class="icon" src="{{url_for('static',filename='img/celular.png')}}"  >
+                    <input type="text" placeholder="celular" >
+                    
+                </div>
+                <div class="inputContenedor">
+                    <img class="icon" src="{{url_for('static',filename='img/direccion.png')}}" >
+                    <input type="text" placeholder="Direccion" >
+                    
+                </div>
+                <div class="inputContenedor">
+                    <img class="icon" src="{{url_for('static',filename='img/user.png')}}"  >
+                    <input type="text" placeholder="Usuario" >
+                    
+                </div>
+                <div class="inputContenedor">
+                    <img class="icon" src="{{url_for('static',filename='img/password.png')}}">
+                    <input type="password" placeholder="Contraseña" >
+                    
+                </div>
+                <input type="submit" value="Registrarse" class="button">
+                <p>Al registrarse aceptas los terminos y condiciones de uso y 
+                    politica de privacidad</p>
+                <p>¿Ya tienes cuenta?<a class="link" href="/">Iniciar Sesion</a></p>
+            </div>
+        </form>
+    </body>
+</html>
