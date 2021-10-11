@@ -1,3 +1,19 @@
 .text-right{
     text-align: right;
 }
+
+ .carousel-item {
+    height: 300px !important;
+  }
+
+  footer{
+   background-color: #cecece;
+  }
+
+  .text-blue{
+      color: #007bff;
+  }
+
+  .nav-item{
+      margin-right: 10px;
+  }

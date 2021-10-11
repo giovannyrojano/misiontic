@@ -18,9 +18,12 @@
 
     <div class="col-md-6 text-right">
         <h3>
-
-            <button class="btn btn-outline-primary">Crear cita</button>
+            <a href="{{ url_for('main.CrearCita') }}">
+                <button class="btn btn-outline-primary" href=""> Crear
+                    cita</button></a>
         </h3>
+
+
     </div>
 
 </div>
@@ -43,34 +46,40 @@
             </thead>
             <tbody id="table-citas">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th onclick="detalleCita(1)">1</th>
+                    <td>Mark Otto</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
 
-                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
-                            class="btn btn-outline-danger">cancelar</button></td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
+                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <th scope="row" onclick="detalleCita(2)">2</th>
+                    <td>Jacob Thornton</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
 
-                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
-                            class="btn btn-outline-danger">cancelar</button></td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button> <button
+                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-
-                    <td> <button class="btn btn-outline-success">Comentar</button> | <button
-                            class="btn btn-outline-danger">cancelar</button> </td>
+                    <td>Larry the Bird</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
+                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+
+
     <!--  citas realizadas-->
     <div class="col-md-6">
 
@@ -87,27 +96,30 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th onclick="detalleCita(1)">1</th>
+                    <td>Mark Otto</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
 
-                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <th scope="row" onclick="detalleCita(2)">2</th>
+                    <td>Jacob Thornton</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
 
-                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-
-                    <td> <button class="btn btn-outline-success">Comentar</button></td>
+                    <td>Larry the Bird</td>
+                    <td>20-10-2021 10:30:00 </td>
+                    <td> Jesus Marco Feliciano</td>
+                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
