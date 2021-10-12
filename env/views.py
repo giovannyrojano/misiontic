@@ -50,5 +50,8 @@ def addCita():
     request.json["hora"]
     return render_template('cita/index.html')
 
+@main.route('/perfil/')
+def perfil():
+    return render_template('perfil.html',)
 
 
