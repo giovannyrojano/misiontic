@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="../static/css/perfil.css">
 </head>
 <body>
 
-    <div class="columna-1">
+    <div class="columna-1" >
+        <img src="../static/img/celular.png" width="50%">
 
-        <div>
+        <div class="info">
+            <div class="contenedor">
+                <p style="margin: 0; float: left; margin-right: 10px;">Eps:</p>  
+                <select name="eps" style="padding: 3px;">
+                    <option value="Asmet salud">Asmet salud</option>
+                    <option value="Nueva eps">Nueva eps</option>
+                    <option value="">Asmet salud</option>
+                    <option value="Asmet salud">Asmet salud</option>
+                    <option value="Asmet salud">Asmet salud</option>
+                </select>
+            </div>
+            <div class="contenedor">
+                <p style="margin: 0; float: left; margin-right: 10px;">Tipo de sangre:</p>  
+                <select name="eps" style="padding: 3px;">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                </select>
+            </div>
             
         </div>
 
@@ -19,8 +38,27 @@
 
 
     <div class="columna-2">
-        <div>
-
+        <div class="info-header">
+            <h1 style="margin: 0;">Nombre de persona</h1>
+            <p style="margin: 0;"> Profesion</p>
+        </div>
+        <div class="info-principal" style="padding-left: 20%;padding-top: 50px;">
+            <div class="contenedor" style="float: left;">
+                <p style="margin-bottom: 25px;margin-top: 0;">Numero de documento: </p> 
+                <p style="margin-bottom: 30px;margin-top: 0;">Nombres: </p>
+                <p style="margin-bottom: 35px;margin-top: 0;">Apellidos: </p>
+                <p style="margin-bottom: 35px;margin-top: 0;">Correo electronico: </p>
+                <p style="margin-bottom: 25px;margin-top: 0;">Celular: </p>
+                
+            </div>
+            <div class="input-contenedor" style="float: left;">
+                <input class="input" type="text"><br>
+                <input class="input" type="text"><br>
+                <input class="input" type="text"><br>
+                <input class="input" type="text"><br>
+                <input class="input" type="text">
+            </div>
+            
         </div>
     </div>
 
