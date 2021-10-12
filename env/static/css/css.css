@@ -1,19 +1,32 @@
-.text-right{
+.text-right
+{
     text-align: right;
 }
 
- .carousel-item {
+.carousel-item 
+{
     height: 300px !important;
-  }
+}
 
-  footer{
+footer
+{
    background-color: #cecece;
-  }
+}
 
-  .text-blue{
-      color: #007bff;
-  }
+.mt-5-text-center
+{
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1), 0 10px 10px 0 rgba(0, 0, 0, 0);
+}
 
-  .nav-item{
-      margin-right: 10px;
-  }
+.text-blue
+{
+    color: #007bff;
+}
+
+.nav-item
+{
+    margin-right: 10px;
+}
