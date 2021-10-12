@@ -21,7 +21,7 @@ def registro():
 #citas
 @main.route('/cita/')
 def cita():
-    return render_template('citas/index.html')
+    return render_template('citas/gestionarCitas.html')
 
 @main.route('/cita/create/')
 def CrearCita():
