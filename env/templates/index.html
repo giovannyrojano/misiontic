@@ -35,7 +35,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Menú</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -44,22 +44,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url_for('main.index') }}">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('main.inicio') }}">INICIO</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Citas
+                            CITAS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <h5 class="dropdown-header">cita</h5>
                             </li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.CrearCita') }}"> nueva cita</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.CrearCita') }}"> Nueva Cita</a></li>
                             <li>
                                 <h5 class="dropdown-header">Gestonar citas</h5>
                             </li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Gestonar citas</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Gestonar Citas</a></li>
                         </ul>
                     </li>
 
@@ -69,39 +69,39 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Usuarios
+                            USUARIOS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <h5 class="dropdown-header">Pacientes</h5>
                             </li>
-                            <li><a class="dropdown-item" href="#"> registrar Paciente</a></li>
+                            <li><a class="dropdown-item" href="/registroUsuario"> Registrar Paciente</a></li>
                             <li><a class="dropdown-item" href="#"> Gestionar Pacientes</a></li>
 
                             <li>
                                 <h5 class="dropdown-header">Medicos</h5>
                             </li>
-                            <li><a class="dropdown-item" href="#"> registrar medico</a></li>
+                            <li><a class="dropdown-item" href="#"> Registrar Médico</a></li>
                             <li><a class="dropdown-item" href="#">Gestionar Medicos</a></li>
 
 
                             <li>
                                 <h5 class="dropdown-header">Administradores</h5>
                             </li>
-                            <li><a class="dropdown-item" href="#"> registrar Superadministradores</a></li>
-                            <li><a class="dropdown-item" href="#">gestionar Superadministradores</a></li>
+                            <li><a class="dropdown-item" href="#"> Registrar Superadministradores</a></li>
+                            <li><a class="dropdown-item" href="#">Gestionar Superadministradores</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                            href="{{ url_for('main.dashboard') }}">Administrar</a>
+                            href="{{ url_for('main.dashboard') }}">ADMINISTRAR</a>
                     </li>
                 </ul>
                 <div class="d-flex">
                     <!--            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
  -->
                     <button class="btn btn-outline-success">
-                        NAME| FOTO
+                        NOMBRE DEL USUARIO
                     </button>
                 </div>
             </div>
@@ -122,7 +122,7 @@
             Centro Cáncer Virgilio Galvis
         </h2>
         <h3>
-            contáctanos
+            Contáctanos
         </h3>
         <div>
 
