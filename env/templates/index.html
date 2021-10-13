@@ -28,10 +28,17 @@
 
 
 <body>
+    <style>
+        body
+        {
+            background-image: url("../static/img/fondo.jpg");
+            background-size: cover;
+            backdrop-filter:blur(10px);
+        }
+    </style>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/perfil/">Mi Perfil</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,14 +55,8 @@
                             CITAS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <h5 class="dropdown-header">cita</h5>
-                            </li>
                             <li><a class="dropdown-item" href="{{ url_for('main.CrearCita') }}"> Nueva Cita</a></li>
-                            <li>
-                                <h5 class="dropdown-header">Gestonar citas</h5>
-                            </li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Gestonar Citas</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Listado de Citas</a></li>
                         </ul>
                     </li>
 
@@ -89,9 +90,9 @@
                 </ul>
                 <div class="d-flex">
                     <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-                    <p>
-                        NOMBRE DEL USUARIO
-                    </p>
+                    <div class="col-md-1">
+                        <a href="/perfil/" target="_parent"><button class="btn btn-outline-success" style="width: 500px;">Nombre Usuario</button></a>
+                    </div>
                 </div>
             </div>
         </div>
