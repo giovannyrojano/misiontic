@@ -8,6 +8,7 @@
     margin-top: 2%;
     padding-bottom: 200px;
     text-align: center;
+    background-color: white;
 }
 img
 {
@@ -17,12 +18,13 @@ img
 }
 .columna-2
 {
-    width: 70%;
+    width: 69%;
     padding-top: 2%;
     padding-bottom: 25%;
     float: right;
-    
-    
+    background-color: white;
+    margin-top: 2%;
+    height: 130%;
 }
 .contenedor{
     padding: 10px;
