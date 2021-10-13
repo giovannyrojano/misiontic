@@ -17,8 +17,8 @@ footer
 {
     border-radius: 15px;
     width: 100%;
+    padding-top: 120px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1), 0 10px 10px 0 rgba(0, 0, 0, 0);
 }
 
 .text-blue
