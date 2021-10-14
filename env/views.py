@@ -36,8 +36,77 @@ def CrearCita():
 def dashboard():
     return render_template('dashboard/index.html')
 
+<<<<<<< HEAD
 #perfil
 @main.route('/perfil/',methods=['GET','POST','PUT'])
+=======
+#home
+@main.route('/inicio/')
+def inicio():
+    return render_template('home/inicio.html')
+
+
+@main.route('/listado/')
+def listado():
+    return render_template('pacientes/index.html',)
+
+
+@main.route('/cita/',methods=['POST'])
+def addCita():
+
+    request.json["hora"]
+    return render_template('cita/index.html')
+
+@main.route('/cita/',methods=['PUT'])
+def dropCita():
+    #editar cita
+    return render_template('cita/index.html')
+
+@main.route('/cita/',methods=['DELETE'])
+def dropCita():
+    #eliminar cita
+    return render_template('cita/index.html')
+
+
+
+#medico
+@main.route('/medico/',methods=['POST'])
+def addMedico():
+  #agregar medico
+    return render_template('medico/index.html')
+
+@main.route('/medico/',methods=['PUT'])
+def editMedico():
+    #editar medico
+     return render_template('medico/index.html')
+
+@main.route('/medico/',methods=['DELETE'])
+def dropMedico():
+    #eliminar medico
+   return render_template('medico/index.html')
+
+
+
+#administrador
+@main.route('/administrador/',methods=['POST'])
+def addAdministrador():
+  #agregar administrador
+    return render_template('administrador/index.html')
+
+@main.route('/administrador/',methods=['PUT'])
+def editAdministrador():
+    #editar administrador
+     return render_template('administrador/index.html')
+
+@main.route('/administrador/',methods=['DELETE'])
+def dropAdministrador():
+    #eliminar administrador
+   return render_template('administrador/index.html')
+
+
+
+@main.route('/perfil/')
+>>>>>>> 24d0c80224e372cabc54cb40903dbfbbdff9ff4f
 def perfil():
     return render_template('perfil.html',)
 
