@@ -36,10 +36,6 @@ def CrearCita():
 def dashboard():
     return render_template('dashboard/index.html')
 
-<<<<<<< HEAD
-#perfil
-@main.route('/perfil/',methods=['GET','POST','PUT'])
-=======
 #home
 @main.route('/inicio/')
 def inicio():
@@ -106,7 +102,6 @@ def dropAdministrador():
 
 
 @main.route('/perfil/')
->>>>>>> 24d0c80224e372cabc54cb40903dbfbbdff9ff4f
 def perfil():
     return render_template('perfil.html',)
 
