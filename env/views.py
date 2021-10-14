@@ -16,8 +16,6 @@ def registro():
     return render_template("registroUsuario.html")
 
 
-
-
 #citas
 @main.route('/cita/')
 def cita():
