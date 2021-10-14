@@ -72,13 +72,13 @@
                             <li>
                                 <h5 class="dropdown-header">Pacientes</h5>
                             </li>
-                            <li><a class="dropdown-item" href="/registroUsuario"> Nuevo Paciente</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Paciente</a></li>
                             <li><a class="dropdown-item" href="#"> Listado de Pacientes</a></li>
 
                             <li>
                                 <h5 class="dropdown-header">Medicos</h5>
                             </li>
-                            <li><a class="dropdown-item" href="/registroUsuario"> Nuevo Médico</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Médico</a></li>
                             <li><a class="dropdown-item" href="#">Listado de Medicos</a></li>
 
                         </ul>
@@ -91,7 +91,7 @@
                 <div class="d-flex">
                     <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
                     <div class="col-md-1">
-                        <a href="/perfil/" target="_parent"><button class="btn btn-outline-success" style="width: 500px;">Nombre Usuario</button></a>
+                        <a href="{{ url_for('main.perfil') }}" target="_parent"><button class="btn btn-outline-success" style="width: 500px;">Nombre Usuario</button></a>
                     </div>
                 </div>
             </div>
