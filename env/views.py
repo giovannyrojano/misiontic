@@ -36,10 +36,6 @@ def CrearCita():
 def dashboard():
     return render_template('dashboard/index.html')
 
-#home
-@main.route('/inicio/')
-def inicio():
-    return render_template('home/inicio.html')
 
 
 @main.route('/listado/')
@@ -54,7 +50,7 @@ def addCita():
     return render_template('cita/index.html')
 
 @main.route('/cita/',methods=['PUT'])
-def dropCita():
+def editCita():
     #editar cita
     return render_template('cita/index.html')
 
