@@ -1,3 +1,12 @@
+body
+{
+    background-image: url("../img/fondo.jpg");
+  /*   background-image: url("../static/img/fondo.jpg");
+  */  background-size: cover;
+    backdrop-filter:blur(10px);
+}
+
+
 .text-right
 {
     text-align: right;
