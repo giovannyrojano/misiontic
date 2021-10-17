@@ -1,10 +1,10 @@
-from flask import Flask  
+from flask import Flask
 
 #main = blueprints.Blueprint('main',__name__)
 
 
-#@main.route('/')
-#def index():
+# @main.route('/')
+# def index():
 # return render_template('index.html')
 
 def create_app():
@@ -16,6 +16,7 @@ def create_app():
     from api import api
     app.register_blueprint(api, url_prefix='/api')
 
+    from ejemplo import ejemplo
+    app.register_blueprint(ejemplo, url_prefix='/ejemplo')
+
     return app
-
-
