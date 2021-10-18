@@ -41,26 +41,56 @@ def getMuchos():
     return jsonify(mensajes)
 
 
-
 # traer un  conjunto completo
-@ ejemplo.route('/getMuchos/')
+@ ejemplo.route('/saveUno/', methods=['POST'])
 def saveUno():
 
-    db = get_db()
-    db.row_factory = sqlite3.Row
-    filas = db.execute("SELECT * FROM usuario").fetchall()
+    try:
+        db = get_db()
+        nombre = request.json['nombre']
+        db.execute("insert into departamento (nombre) values(?)", ([nombre]))
+        db.commit()
+        db.close()
+    # atrapar si existe algun error
+    except sqlite3.Error as error:
+        return jsonify({"error": True, "msg": error})
+    return jsonify({"error": False, "msg": "creado correctamente"})
 
-    db.close()
-    mensajes = []
-    for item in filas:
-        mensajes.append({k: item[k] for k in item.keys()})
-    return jsonify(mensajes)
+
+# editar
+@ ejemplo.route('/editUno/<id>', methods=['PUT'])
+def editeUno(id):
+    try:
+        db = get_db()
+        nombre = request.json['nombre']
+        db.execute("UPDATE departamento set nombre=?  where id=?", (nombre, id))
+        db.commit()
+        db.close()
+    # atrapar si existe algun error
+    except sqlite3.Error as error:
+        return jsonify({"error": True, "msg": error})
+    return jsonify({"error": False, "msg": "actualizado correctamente"})
+
+# eliminar
 
 
+@ ejemplo.route('/deletetUno/<id>', methods=['DELETE'])
+def deleteUno(id):
+    try:
+        db = get_db()
+        db.execute("delete from departamento where id=?", ([id]))
+        db.commit()
+        db.close()
+    # atrapar si existe algun error
+    except sqlite3.Error as error:
+        return jsonify({"error": True, "msg": error})
+    return jsonify({"error": False, "msg": "eliminado correctamente"})
 
 
 # almacenar en una tabla que los campos sean dinamicos
-#no terminado
+# no terminado
+
+
 @ejemplo.route('/save/', methods=['POST'])
 def save():
     # importar la bd
