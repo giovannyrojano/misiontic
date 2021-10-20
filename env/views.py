@@ -6,7 +6,7 @@ import yagmail
 main = blueprints.Blueprint('main', __name__)
 
 #login
-@main.route('/')
+@main.route('/',methods=['GET','POST'])
 def index():
  return render_template("login.html")
 
@@ -15,26 +15,27 @@ def index():
 def registro():
     return render_template("registroUsuario.html")
 
-
-#citas
-@main.route('/cita/')
-def cita():
-    return render_template('citas/gestionarCitas.html')
-
-@main.route('/cita/create/')
-def CrearCita():
-    return render_template('citas/crearCita.html')    
-
-
-#dashboard
-@main.route('/dashboard/')
-def dashboard():
-    return render_template('dashboard/index.html')
-
 #home
 @main.route('/inicio/')
 def inicio():
     return render_template('home/inicio.html')
+
+#citas
+@main.route('/gestioncita/',methods=['GET','POST','DELETE','PUT'])
+def cita():
+    return render_template('citas/gestionarCitas.html')
+
+
+#crear cita
+@main.route('/cita/create/',methods=['POST','GET'])
+def CrearCita():
+    return render_template('citas/crearCita.html')    
+
+#dashboard
+@main.route('/dashboard/',methods=['GET'])
+def dashboard():
+    return render_template('dashboard/index.html')
+
 
 
 @main.route('/listado/')
@@ -49,7 +50,7 @@ def addCita():
     return render_template('cita/index.html')
 
 @main.route('/cita/',methods=['PUT'])
-def dropCita():
+def editCita():
     #editar cita
     return render_template('cita/index.html')
 
