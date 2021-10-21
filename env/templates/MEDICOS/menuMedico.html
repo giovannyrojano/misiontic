@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/css.css') }}" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- sweetalert2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!-- scripts propios -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+<!-- scripts propios -->
+<script src="{{ url_for('static', filename='js/http.js') }}"></script>
+<!-- scripts propios -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('main.inicio') }}">INICIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            CITAS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('main.CrearCita') }}"> Nueva Cita</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Listado de Citas</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            USUARIOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <h5 class="dropdown-header">Pacientes</h5>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Paciente</a></li>
+                            <li><a class="dropdown-item" href="#"> Listado de Pacientes</a></li>
+
+                            <li>
+                                <h5 class="dropdown-header">Medicos</h5>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Médico</a></li>
+                            <li><a class="dropdown-item" href="#">Listado de Medicos</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="{{ url_for('main.dashboard') }}">ADMINISTRAR</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                    <div class="col-md-1">
+                        <a href="{{ url_for('main.perfil') }}" target="_parent"><button class="btn btn-outline-success"
+                                style="width: 500px;">Nombre Usuario</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" style="min-height: 1000px;">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
