@@ -1,60 +1,71 @@
 <html>
-    <head>
-        <title>registro</title>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilo.css')}}"/>
-        
-        <script src="https://kit.fontawesome.com/4fd8c826c1.js" crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
-    </head>
 
-    <body>
-        <form class="formulario">
-            <h1>Nuevo usuario</h1>
-            <div class="contenedor">
-                <div class="inputContenedor">
-                    <input type="text" placeholder="Nombres" style="width: 100%;" >
-                </div>
-                <div class="inputContenedor">
-                    <input type="text" placeholder="Apellidos" style="width: 100%;">
-                </div>
-                <div class="inputContenedor">
-                    <i id="icon" class="far fa-envelope"></i>
-                    <input type="text" placeholder="Email" >
-                    
-                </div>
-                <div class="inputContenedor" style="padding: 10px; background:rgb(255, 255, 255);">
-                    <label> Tipo de documento:</label>
-                    <label for="rCedula">CC</label>
-                    <input id="rCedula" type="radio" value="CC" name="documento">
-                    <label for="rTarjeta">Ti</label>
-                    <input id="rTarjeta" type="radio" value="Ti" name="documento">
-                </div>
-                <div class="inputContenedor">
-                    <input type="text" placeholder="Numero de documento" style="width: 100%;">
-                </div>
-                <div class="inputContenedor">
-                    <i id="icon" class="fas fa-mobile-alt"></i>
-                    <input type="text" placeholder="celular" >
-                    
-                </div>
-                <div class="inputContenedor">
-                    <i id="icon" class="fas fa-street-view"></i>
-                    <input type="text" placeholder="Direccion" >
-                    
-                </div>
-                <div class="inputContenedor">
-                    <i id="icon" class="fas fa-lock"></i>
-                    <input type="password" placeholder="Contraseña" >
-                    
-                </div>
-                <div style="text-align: center;margin-top: 40px;">
-                    <a href="{{ url_for('main.inicio') }}" class="button" style="text-decoration: none;">Registrarse</a>
+<head>
+    <title>registro</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilo.css')}}" />
 
-                </div>
-                <p>Al registrarse aceptas los terminos y condiciones de uso y 
-                    politica de privacidad</p>
-                <p>¿Ya tienes cuenta?<a class="link" href="/">Iniciar Sesion</a></p>
+    <script src="https://kit.fontawesome.com/4fd8c826c1.js" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- scripts propios -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+    <script src="{{ url_for('static', filename='js/usuario/usuarioController.js') }}"></script>
+
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form class="formulario" id="registro" action="">
+        <h1>Nuevo usuario</h1>
+        <div class="contenedor">
+            <div class="inputContenedor">
+                <input type="text" placeholder="Nombres" name="nombres" style="width: 100%;">
             </div>
-        </form>
-    </body>
+            <div class="inputContenedor">
+                <input type="text" placeholder="Apellidos" name="apellidos" style="width: 100%;">
+            </div>
+            <div class="inputContenedor">
+                <i id="icon" class="far fa-envelope"></i>
+                <input type="text" placeholder="Email">
+
+            </div>
+            <div class="inputContenedor" style="padding: 10px; background:rgb(255, 255, 255);">
+                <label> Tipo de documento:</label>
+                <div id="list-tipo-documento">
+
+                </div>
+            </div>
+            <div class="inputContenedor">
+                <input type="text" placeholder="Numero de documento" name="documento" style="width: 100%;">
+            </div>
+            <div class="inputContenedor">
+                <i id="icon" class="fas fa-mobile-alt"></i>
+                <input type="text" placeholder="celular" name="telefono">
+
+            </div>
+            <div class="inputContenedor">
+                <i id="icon" class="fas fa-street-view"></i>
+                <input type="text" placeholder="Direccion" name="direccion">
+
+            </div>
+            <div class="inputContenedor">
+                <i id="icon" class="fas fa-lock"></i>
+                <input type="password" placeholder="Contraseña" name="password">
+
+            </div>
+            <div style="text-align: center;margin-top: 40px;">
+                <button class="button" style="text-decoration: none;"
+                    onclick="registrarUsuario(event)">Registrarse</button>
+
+            </div>
+            <p>Al registrarse aceptas los terminos y condiciones de uso y
+                politica de privacidad</p>
+            <p>¿Ya tienes cuenta?<a class="link" href="/">Iniciar Sesion</a></p>
+        </div>
+    </form>
+</body>
+
 </html>
