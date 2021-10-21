@@ -1,53 +1,8 @@
-.columna-1
-{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 30%;
-    float: left;
-    padding-top: 10%;
-    border-radius: 2%;
-    margin-top: 2%;
-    padding-bottom: 200px;
-    text-align: center;
-    background-color: white;
-}
+
 img
 {
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    height: 25%;
     border-radius: 50%;
 }
-.columna-2
-{
-    width: 69%;
-    padding-top: 2%;
-    padding-bottom: 25%;
-    float: right;
-    background-color: white;
-    margin-top: 2%;
-    height: 130%;
-}
-.contenedor{
-    padding: 10px;
-    padding-top: 0px;
-}
-.info{
-    padding: 10% 20% 70% 20%;
-    
-}
-body{
-    background-color: rgb(172, 213, 214);
-}
-.info-header{
-    text-align: center;
-    padding-bottom: 30px;
-}
-.info-principal{
-    font-size: 20px;
-}
-.input{
-    padding: 2px;
-    margin-left: 10px;
-    margin-bottom: 25px;
-    border: 1px solid rgb(184, 184, 184);
-    font-size: 20px;
-}
+

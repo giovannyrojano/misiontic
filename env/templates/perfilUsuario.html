@@ -2,60 +2,127 @@
 
 {% extends "administrador/menuAdmin.html" %}
 {% block body%}
-<div>
-    <div class="columna-1">
-    <img src="../static/img/avatar.png">
+<div class="row-md-12 my-5 d-flex justify-content-between">
 
-    <div class="info">
-        <div class="contenedor">
-            <p style="margin: 0; float: left; margin-right: 10px;">Eps:</p>
-            <select name="eps" style="padding: 3px;">
-                <option value="Asmet salud">Asmet salud</option>
-                <option value="Nueva eps">Nueva eps</option>
-                <option value="">Asmet salud</option>
-                <option value="Asmet salud">Asmet salud</option>
-                <option value="Asmet salud">Asmet salud</option>
-            </select>
+    <div class="col-md-3 flex-column bg-light">
+
+        <div class="row-md-3 my-5 d-flex justify-content-center">
+            <img src="../static/img/avatar.png">
         </div>
-        <div class="contenedor">
-            <p style="margin: 0; float: left; margin-right: 10px;">Tipo de sangre:</p>
-            <select name="eps" style="padding: 3px;">
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-            </select>
+
+        <div class="row-md-3 my-2">
+
+            <div class="row-md-3 d-flex">
+                <p style="margin: 5%;">Eps:</p>
+            </div>
+
+            <div class="row-md-3 d-flex">
+                <select style="padding: 0%; width: 80%; margin: 5%;">
+                    <option value="Asmet salud">-------</option>
+                    <option value="Nueva eps">Nueva eps</option>
+                    <option value="">Asmet salud</option>
+                    <option value="Asmet salud">Asmet salud</option>
+                    <option value="Asmet salud">Asmet salud</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row-md-3 my-2">
+
+            <div class="row-md-3 d-flex">
+                <p style="margin: 5%;">Tipo de sangre:</p>
+            </div>
+
+            <div class="row-md-3 d-flex">
+                <select style="padding: 0%; width: 80%; margin: 5%;">
+                    <option value="A+">--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                </select>
+
+            </div>
+
         </div>
 
     </div>
 
-</div>
+    <div class="col-md-8 bg-light">
 
-
-<div class="columna-2">
-    <div class="info-header">
-        <h1 style="margin: 0;">Nombre de persona</h1>
-        <p style="margin: 0;"> Profesion</p>
-    </div>
-    <div class="info-principal" style="padding-left: 20%;padding-top: 50px;">
-        <div class="contenedor" style="float: left;">
-            <p style="margin-bottom: 25px;margin-top: 0;">Numero de documento: </p>
-            <p style="margin-bottom: 30px;margin-top: 0;">Nombres: </p>
-            <p style="margin-bottom: 35px;margin-top: 0;">Apellidos: </p>
-            <p style="margin-bottom: 35px;margin-top: 0;">Correo electronico: </p>
-            <p style="margin-bottom: 25px;margin-top: 0;">Celular: </p>
-
+        <div class="row-md-8">
+            <div class="d-flex justify-content-center">
+                <h1>Nombre De Persona</h1>
+            </div>
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0%;">Profesion</p>
+            </div>
+            <hr style="margin: 1%;">
         </div>
-        <div class="input-contenedor" style="float: left;">
-            <input class="input" type="text"><br>
-            <input class="input" type="text"><br>
-            <input class="input" type="text"><br>
-            <input class="input" type="text"><br>
-            <input class="input" type="text">
+
+        <div class="row-md-8 my-4">
+
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Numero de documento</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
+    
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Nombres</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Apellidos</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Celular</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Correo Electrónico</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="row-md-8 d-flex">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <p style="margin-right: 2%;">Contraseña</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+            </div>
         </div>
-        <input type="button" value="Guardar Cambios" style="margin-top:100px;  padding: 5px; border-radius: 5px; background-color: #fff;">
+
+        <div class="row-md-8 d-flex justify-content-center">
+            <button class="btn btn-primary"> Guardar Cambios </button>
+        </div>
+        
     </div>
-</div>
 </div>
 {% endblock %}
