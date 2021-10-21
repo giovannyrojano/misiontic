@@ -11,19 +11,19 @@ def index():
  return render_template("login.html")
 
 #registro
-@main.route('/registroUsuario',methods=['GET','POST'])          
+@main.route('/registroPaciente/',methods=['GET','POST'])          
 def registro():
-    return render_template("registroUsuario.html")
+    return render_template('pacientes/registroPaciente.html')
 
 #home
 @main.route('/inicio/')
 def inicio():
-    return render_template('home/inicio.html')
+    return render_template('inicio.html')
 
 #citas
 @main.route('/gestioncita/',methods=['GET','POST','DELETE','PUT'])
 def cita():
-    return render_template('citas/gestionarCitas.html')
+    return render_template('administrador/citas/gestionarCitas.html')
 
 
 #crear cita
