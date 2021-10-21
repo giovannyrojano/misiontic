@@ -51,7 +51,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url_for('main.CrearCita') }}"> Nueva Cita</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.cita') }}"> Listado de Citas</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.gestionCita') }}"> Gestionar Citas</a></li>
                         </ul>
                     </li>
 
@@ -59,7 +59,7 @@
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             USUARIOS
                         </a>
@@ -67,14 +67,14 @@
                             <li>
                                 <h5 class="dropdown-header">Pacientes</h5>
                             </li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Paciente</a></li>
-                            <li><a class="dropdown-item" href="#"> Listado de Pacientes</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registroUsuario') }}"> Nuevo Paciente</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.listadoPacientes') }}"> Listado de Pacientes</a></li>
 
                             <li>
                                 <h5 class="dropdown-header">Medicos</h5>
                             </li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.registro') }}"> Nuevo Médico</a></li>
-                            <li><a class="dropdown-item" href="#">Listado de Medicos</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.registroUsuario') }}"> Nuevo Médico</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.listadoMedicos') }}">Listado de Medicos</a></li>
 
                         </ul>
                     </li>

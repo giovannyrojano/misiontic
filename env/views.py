@@ -10,95 +10,51 @@ main = blueprints.Blueprint('main', __name__)
 def index():
  return render_template("login.html")
 
-#registro
-@main.route('/registroUsuario',methods=['GET','POST'])          
+#registro paciente
+@main.route('/registroPaciente/',methods=['GET','POST'])          
 def registro():
-    return render_template("registroUsuario.html")
+    return render_template("pacientes/registroPaciente.html")
 
+
+
+# ADMINISTRADOR
 #home
 @main.route('/inicio/')
 def inicio():
-    return render_template('home/inicio.html')
-
-#citas
-@main.route('/gestioncita/',methods=['GET','POST','DELETE','PUT'])
-def cita():
-    return render_template('citas/gestionarCitas.html')
-
+    return render_template('administrador/inicioAdmin.html')
 
 #crear cita
-@main.route('/cita/create/',methods=['POST','GET'])
+@main.route('/crearCita/',methods=['POST','GET'])
 def CrearCita():
-    return render_template('citas/crearCita.html')    
+    return render_template('administrador/citas/nuevaCita.html')  
+
+#gestion cita
+@main.route('/gestioncita/',methods=['GET','POST','DELETE','PUT'])
+def gestionCita():
+    return render_template('administrador/citas/gestionarCitas.html')
+
+#registro de usuarios
+@main.route('/registroUsuario/')
+def registroUsuario():
+    return render_template('administrador/usuarios/registroUsuario.html')
+
+#listado de pacientes
+@main.route('/listadoPacientes/')
+def listadoPacientes():
+    return render_template('administrador/usuarios/listadoPacientes.html')
+
+#listado de Medicos
+@main.route('/listadoMedicos/')
+def listadoMedicos():
+    return render_template('administrador/usuarios/listadoMedicos.html')
 
 #dashboard
 @main.route('/dashboard/',methods=['GET'])
 def dashboard():
-    return render_template('dashboard/index.html')
-
-
-
-@main.route('/listado/')
-def listado():
-    return render_template('pacientes/index.html',)
-
-
-@main.route('/cita/',methods=['POST'])
-def addCita():
-
-    request.json["hora"]
-    return render_template('cita/index.html')
-
-@main.route('/cita/',methods=['PUT'])
-def editCita():
-    #editar cita
-    return render_template('cita/index.html')
-
-@main.route('/cita/',methods=['DELETE'])
-def dropCita():
-    #eliminar cita
-    return render_template('cita/index.html')
-
-
-
-#medico
-@main.route('/medico/',methods=['POST'])
-def addMedico():
-  #agregar medico
-    return render_template('medico/index.html')
-
-@main.route('/medico/',methods=['PUT'])
-def editMedico():
-    #editar medico
-     return render_template('medico/index.html')
-
-@main.route('/medico/',methods=['DELETE'])
-def dropMedico():
-    #eliminar medico
-   return render_template('medico/index.html')
-
-
-
-#administrador
-@main.route('/administrador/',methods=['POST'])
-def addAdministrador():
-  #agregar administrador
-    return render_template('administrador/index.html')
-
-@main.route('/administrador/',methods=['PUT'])
-def editAdministrador():
-    #editar administrador
-     return render_template('administrador/index.html')
-
-@main.route('/administrador/',methods=['DELETE'])
-def dropAdministrador():
-    #eliminar administrador
-   return render_template('administrador/index.html')
-
-
+    return render_template('administrador/dashboard.html')
 
 @main.route('/perfil/')
 def perfil():
-    return render_template('perfil.html',)
+    return render_template('perfilUsuario.html',)
 
 
