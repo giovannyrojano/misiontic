@@ -1,5 +1,4 @@
 
-
 function http(URL, METHOD) {
     var objXMLHTTP = new XMLHttpRequest();
 
@@ -11,7 +10,6 @@ function http(URL, METHOD) {
     objXMLHTTP.addEventListener('abort', abortado);
 
     objXMLHTTP.send();
-
 
     function manejarError(evt) {
         console.log('ocurrio un error.');
@@ -27,12 +25,11 @@ function http(URL, METHOD) {
         console.log('cancelado');
     }
 
-    function completado(evt) {
+    async function completado(evt) {
         var data = JSON.parse(this.response);
         console.log(data);
-
-
+        return data;
     }
 }
 
-this.http('http://localhost:5000/api/test/', 'GET');
+//this.http('http://localhost:5000/api/test/', 'GET');

@@ -53,7 +53,7 @@ function registrarUsuario(event) {
 
     var objXMLHTTP = new XMLHttpRequest();
 
-    objXMLHTTP.open('POST', API_URL + 'usuario/');
+    objXMLHTTP.open('POST', API_URL + 'paciente/');
 
     objXMLHTTP.addEventListener('load', completado);
     objXMLHTTP.addEventListener('error', manejarError);
@@ -80,6 +80,22 @@ function registrarUsuario(event) {
 
     async function completado(evt) {
         var data = JSON.parse(this.response);
+        if (data.error) {
+            Swal.fire({
+                title: 'ERROR',
+                text: data.msg,
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            });
+        } else {
+            Swal.fire({
+                title: 'Exito',
+                text: data.msg,
+                icon: 'success',
+                confirmButtonText: 'OK',
+            });
+        }
+
         console.log(data);
     }
 }
