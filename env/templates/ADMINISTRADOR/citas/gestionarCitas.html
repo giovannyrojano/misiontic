@@ -4,29 +4,31 @@
 <h2>
     Gestionar Citas
 </h2>
-<div class="row col-md-12">
+<div>
+    <div class="d-flex justify-content-between">
+        <div class="col-md-3">
+            <button class=" btn btn-outline-success " type="submit">Buscar por Medico</button>
+            <input class="my-2 form-control" type="search" id="text-cita" placeholder="Nombre Medico"
+                aria-label="Search">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-outline-success" type="submit">Buscar por Paciente</button>
+            <input class="form-control my-2" type="search" id="text-cita" placeholder="Nombre Paciente"
+                aria-label="Search">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-outline-success" type="submit">Buscar por Fecha</button>
+            <div class="my-2">
+                <input type="date">
+            </div>
 
-
-
-    <div class="col-md-5">
-        <input class="form-control me-2" type="search" id="text-cita" placeholder="Search" aria-label="Search">
-    </div>
-    <div class="col-md-1">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </div>
-
-    <div class="col-md-6 text-right">
-        <h3>
-            <a href="{{ url_for('main.CrearCita') }}">
-                <button class="btn btn-outline-primary"> Crearcita</button></a>
-        </h3>
-
-
+        </div>
+        <hr>
     </div>
 
 </div>
 
-<div class="row col-md-12" style="background-color:white; border-radius: 10px; margin-left: 2px;">
+<div class="row bg-light my-5">
 
     <!--  citas pendientes-->
     <div class="col-md-6">
@@ -44,8 +46,8 @@
             </thead>
             <tbody id="table-citas">
                 <tr onclick="detalleCita(1)" style="cursor: pointer;">
-                    <th  >1</th>
-                    <td >Mark Otto</td>
+                    <th>1</th>
+                    <td>Mark Otto</td>
                     <td>20-10-2021 10:30:00 </td>
                     <td> Jesus Marco Feliciano</td>
 
@@ -54,7 +56,7 @@
                     </td>
                 </tr>
                 <tr onclick="detalleCita(2)" style="cursor: pointer;">
-                    <th scope="row" >2</th>
+                    <th scope="row">2</th>
                     <td>Jacob Thornton</td>
                     <td>20-10-2021 10:30:00 </td>
                     <td> Jesus Marco Feliciano</td>
