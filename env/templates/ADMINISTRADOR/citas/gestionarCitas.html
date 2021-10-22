@@ -1,132 +1,130 @@
 {% extends "administrador/menuAdmin.html" %}
 {% block body%}
+<body>
+    <h1 style="margin-top: 5%;">
+        Gestionar Citas
+        <hr>
+    </h1>
 
-<h2>
-    Gestionar Citas
-</h2>
-<div class="row col-md-12">
-
-
-
-    <div class="col-md-5">
-        <input class="form-control me-2" type="search" id="text-cita" placeholder="Search" aria-label="Search">
+    <div class="row-md-12 d-flex">
+    
+        <div class="col-md-5">
+            <input class="form-control me-2" type="search" id="text-cita" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </div>
+    
+        <div class="col-md-6 text-right">
+            <h3>
+                <a href="{{ url_for('main.CrearCita') }}">
+                    <button class="btn btn-outline-primary"> Crearcita</button></a>
+            </h3>
+        </div>
+    
     </div>
-    <div class="col-md-1">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    
+    <div class="row col-md-12" style="background-color:white; border-radius: 10px; margin-left: 2px;">
+    
+        <!--  citas pendientes-->
+        <div class="col-md-6">
+            <h3 class="text-center"> citas pendientes</h3>
+    
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Medico </th>
+                        <th scope="col">accion </th>
+                    </tr>
+                </thead>
+                <tbody id="table-citas">
+                    <tr onclick="detalleCita(1)" style="cursor: pointer;">
+                        <th  >1</th>
+                        <td >Mark Otto</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+    
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
+                                class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr onclick="detalleCita(2)" style="cursor: pointer;">
+                        <th scope="row" >2</th>
+                        <td>Jacob Thornton</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+    
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button> <button
+                                class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr onclick="detalleCita(3)" style="cursor: pointer;">
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
+                                class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    
+    
+        <!--  citas realizadas-->
+        <div class="col-md-6">
+    
+            <h3 class="text-center"> citas realizadas</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Medico </th>
+                        <th scope="col">accion </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th onclick="detalleCita(1)">1</th>
+                        <td>Mark Otto</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+    
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" onclick="detalleCita(2)">2</th>
+                        <td>Jacob Thornton</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+    
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td>20-10-2021 10:30:00 </td>
+                        <td> Jesus Marco Feliciano</td>
+                        <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+         
     </div>
-
-    <div class="col-md-6 text-right">
-        <h3>
-            <a href="{{ url_for('main.CrearCita') }}">
-                <button class="btn btn-outline-primary"> Crearcita</button></a>
-        </h3>
-
-
-    </div>
-
-</div>
-
-<div class="row col-md-12" style="background-color:white; border-radius: 10px; margin-left: 2px;">
-
-    <!--  citas pendientes-->
-    <div class="col-md-6">
-        <h3 class="text-center"> citas pendientes</h3>
-
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Paciente</th>
-                    <th scope="col">Hora</th>
-                    <th scope="col">Medico </th>
-                    <th scope="col">accion </th>
-                </tr>
-            </thead>
-            <tbody id="table-citas">
-                <tr onclick="detalleCita(1)" style="cursor: pointer;">
-                    <th  >1</th>
-                    <td >Mark Otto</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
-                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
-                    </td>
-                </tr>
-                <tr onclick="detalleCita(2)" style="cursor: pointer;">
-                    <th scope="row" >2</th>
-                    <td>Jacob Thornton</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button> <button
-                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
-                    </td>
-                </tr>
-                <tr onclick="detalleCita(3)" style="cursor: pointer;">
-                    <th scope="row">3</th>
-                    <td>Larry the Bird</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button><button
-                            class="btn btn-outline-danger"><i class="fas fa-calendar-times"></i></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-
-    <!--  citas realizadas-->
-    <div class="col-md-6">
-
-        <h3 class="text-center"> citas realizadas</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Paciente</th>
-                    <th scope="col">Hora</th>
-                    <th scope="col">Medico </th>
-                    <th scope="col">accion </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th onclick="detalleCita(1)">1</th>
-                    <td>Mark Otto</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" onclick="detalleCita(2)">2</th>
-                    <td>Jacob Thornton</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry the Bird</td>
-                    <td>20-10-2021 10:30:00 </td>
-                    <td> Jesus Marco Feliciano</td>
-                    <td> <button class="btn btn-outline-success"><i class="fas fa-comment-medical"></i></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-</div>
-
-
-<script src="{{ url_for('static', filename='js/citas/citasController.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/citas/citasController.js') }}"></script>
+</body>
 
 {% endblock %}

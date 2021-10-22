@@ -1,81 +1,102 @@
 {% extends "administrador/menuAdmin.html" %}
 {% block body%}
 
-<!-- Carousel -->
-<div id="demo" class="carousel carousel-dark slide  mt-5" data-bs-ride="carousel" style="height: 50%;">
+<style>
+    .carousel-item
+    {
+        height: 300px;
+    }
+</style>
 
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+<div class="row-md-12">
+    <!-- Carousel -->
+    <div id="demo" class="carousel carousel-dark mt-2" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
+                    style="width:100%; border-radius: 20px;">
+                <div class="carousel-caption">
+                    <h3> Somos Centro de Cáncer Virgilio Galvis </h3>
+                    <p>Comprometidos con la salud de nuestros pacientes</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
+                    style="width:100%; border-radius: 20px;">
+                <div class="carousel-caption">
+                    <h3>Hacia el futuro</h3>
+                    <p> En <strong> Centro Cáncer Virgilio Galvis </strong> Apuntamos a soluciones de tecnologia de
+                        punta
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
+                    style="width:100%; border-radius: 20px;">
+                <div class="carousel-caption">
+                    <h3> Atencion rapida</h3>
+                    <p> Nos dedicamos 100% a nuestros pacientes </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
-
-    <!-- The slideshow/carousel -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
-                style="width:100%;">
-            <div class="carousel-caption">
-                <h3> Somos Centro de Cáncer Virgilio Galvis </h3>
-                <p>Comprometidos con la salud de nuestros pacientes</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
-                style="width:100%">
-            <div class="carousel-caption">
-                <h3>Hacia el futuro</h3>
-                <p> En <strong> Centro Cáncer Virgilio Galvis </strong> Apuntamos a soluciones de tecnologia de punta
-                </p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src=" {{ url_for('static', filename='img/medico.jpg') }}" alt="" class="d-block"
-                style="width:100%">
-            <div class="carousel-caption">
-                <h3> Atencion rapida</h3>
-                <p> Nos dedicamos 100% a nuestros pacientes </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
 </div>
 
 
-<div class="row  col-md-12 mt-5 text-center ">
 
-    <div class="  col-md-4 " >
-        <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin: 5px; width: 360px;">
+<div class="row-md-12 mt-3 d-flex text-center justify-content-around p-3"
+    style="background-color: rgba(226, 224, 224, 0.699); border-radius: 5px;">
+
+    <div class="col-md-3" >
+        <div class="card" 
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100%;">
             <div class="card-header">Nosotros</div>
-            <div class="card-body" style="height: 300px;">Somos una institución prestadora de servicios de salud de alta complejidad, con los más altos estándares de calidad, 
+            <div class="card-body" style="height: 100%">
+                Somos una institución prestadora de servicios de salud de alta complejidad, con los más altos estándares de calidad, 
                 comprometidos con brindar atención humana 
                 y segura para nuestros usuarios.</div>
 
         </div>
     </div>
 
-    <div class="  col-md-4 " >
-        <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin: 5px; width: 360px;"> 
+    <div class="col-md-3" >
+        <div class="card" 
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100%;"> 
             <div class="card-header">Vision</div>
-            <div class="card-body" style="height: 300px;">En el 2025 buscamos continuar siendo reconocidos a nivel nacional 
+            <div class="card-body" style="height: 100%;">
+                En el 2025 buscamos continuar siendo reconocidos a nivel nacional 
                 e internacional como una institución líder en el sector salud, generadora de desarrollo científico basado en la investigación, 
                 contando con la más alta tecnología, con el fin de prestar el mejor servicio a 
                 nuestros pacientes.</div>
 
         </div>
     </div>
-    <div class="  col-md-4 " >
-        <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin: 5px; width: 360px;">
+    <div class="col-md-3" >
+        <div class="card" 
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100%;">
             <div class="card-header">Mision</div>
-            <div class="card-body" style="height: 300px;">El Centro de Cáncer  Virgilio Galvis tiene como finalidad la 
+            <div class="card-body" style="height: 100%;">
+                El Centro de Cáncer  Virgilio Galvis tiene como finalidad la 
                 atención integral del paciente con cáncer. 
                 Para ello cuenta con programas orientados a la prevención, 
                 diagnóstico, tratamiento y rehabilitación de la enfermedad; 
@@ -86,24 +107,4 @@
         </div>
     </div>
 </div>
-
-<footer class="mt-5-text-center">
-
-    <h2>
-        Centro Cáncer Virgilio Galvis
-    </h2>
-    <h3>
-        Contáctanos
-    </h3>
-    <h6>
-        Tel: 37274853
-    </h6>
-    <h6>
-        Email: Correohospital@hospital.com
-    </h6>
-    <h6>
-        San Juancito Norte de Santander
-    </h6>
-
-</footer>
 {% endblock %}
