@@ -44,7 +44,7 @@ detalleCita = function (cita) {
 
     Swal.fire({
 
-        title: 'detalle cita ' + cita,
+        title: 'Detalle de cita ' + cita,
         width: 700,
         html: `<div class="row col-md-12 border-bottom">
 
@@ -52,7 +52,7 @@ detalleCita = function (cita) {
             <h2> <strong>Paciente:</strong> </h2>
         </div>
         <div class="col-md-6">
-            <h2> CArlos Muños</h2>
+            <h2> Carlos Muños</h2>
         </div>
     
     </div>
@@ -94,8 +94,11 @@ detalleCita = function (cita) {
         <div class="col-md-6">
             <h2> <strong>Estado:</strong> </h2>
         </div>
-        <div class="col-md-6">
-            <h2 class="text-blue"> Pendiente</h2>
+        <div class="col-md-6 ">
+            <label for="estado">Pendiente</label>
+            <input type="radio" name="estado" value="pendiente" checked>
+            <label for="estado">Realizada</label>
+            <input type="radio" name="estado" value="realizada">
         </div>
     
     </div>
@@ -105,11 +108,7 @@ detalleCita = function (cita) {
         <h2 class="text-center"> <strong>Comentarios:</strong> </h2>
     
         <div class="col-md-12">
-    
-            <div class="card">
-                <div class="card-body"> Ok estare pendiente</div>
-                <div class="card-footer"> 10/12/2021 10:45:10</div>
-            </div>
+            <textarea rows="6" cols="50"> sin comentarios </textarea>
         </div>
     
     
